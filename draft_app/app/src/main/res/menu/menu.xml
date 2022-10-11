@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/Bluetooth_menu"
+        android:orderInCategory="1"
+        app:showAsAction="never"
+        android:title="블루투스 연결"/>
+    <item
+        android:id ="@+id/Setting_menu"
+        android:orderInCategory="2"
+        app:showAsAction="never"
+        android:title="설정 화면"/>
+
+    <item
+        android:id="@+id/Sound_menu"
+        android:orderInCategory="3"
+        app:showAsAction="never"
+        android:title="사운드 설정 화면"/>
+</menu>

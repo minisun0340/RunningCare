@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#666">
+
+        <TextView
+            android:id="@+id/sound_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingLeft="12dp"
+            android:paddingRight="50dp"
+            android:text="@string/select_device"
+            android:textColor="#fff"
+            android:textSize="15dip" />
+
+        <ImageView
+            android:id="@+id/about"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@android:drawable/ic_menu_info_details" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/ButtonSetting"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="설정" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="633dp">
+
+        <RadioButton
+            android:id="@+id/ButtonID1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="121"
+            android:checked="true"
+            android:text="기본음" />
+
+        <RadioButton
+            android:id="@+id/ButtonID2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="121"
+            android:text="일반 1" />
+
+        <RadioButton
+            android:id="@+id/ButtonID3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="121"
+            android:text="일반 2" />
+
+        <RadioButton
+            android:id="@+id/ButtonID4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="121"
+            android:text="일반 3" />
+
+        <RadioButton
+            android:id="@+id/ButtonID5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="121"
+            android:text="일반 4" />
+
+        <RadioButton
+            android:id="@+id/ButtonID6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="121"
+            android:text="일반 5" />
+
+        <RadioButton
+            android:id="@+id/ButtonID8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="121"
+            android:text="남자 목소리" />
+
+        <RadioButton
+            android:id="@+id/ButtonID9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="121"
+            android:text="여자 목소리" />
+
+        <RadioButton
+            android:id="@+id/ButtonID7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="121"
+            android:text="녹음" />
+
+    </RadioGroup>
+
+</LinearLayout>

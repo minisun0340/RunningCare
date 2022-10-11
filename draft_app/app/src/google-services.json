@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "280593542062",
+    "project_id": "intervoid-app-gps-api",
+    "storage_bucket": "intervoid-app-gps-api.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:280593542062:android:6931b6f85e7559c9faf63f",
+        "android_client_info": {
+          "package_name": "com.example.student_run_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "280593542062-cd6l7sts1h7ho6lejrifobqad58qmn9v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.student_run_app",
+            "certificate_hash": "484c54f2e62b11543d59857568bad6860221fc70"
+          }
+        },
+        {
+          "client_id": "280593542062-dk43nggtk7r38281ciq3j166lb41jd99.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQe0xx5eE3SarbBfkjoVrrbvkGW6JzNMw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "280593542062-dk43nggtk7r38281ciq3j166lb41jd99.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
