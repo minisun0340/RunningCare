@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_weight="5">
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/logo"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/login_Id"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:background="@drawable/activity_login_edit"
+            android:hint="ID"
+            android:paddingLeft="20dp"
+            />
+
+        <RelativeLayout
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            >
+            <EditText
+                android:id="@+id/login_Pass"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:background="@drawable/activity_login_edit"
+                android:hint="password"
+                android:paddingLeft="20dp"
+                android:layout_marginTop="10dp"/>
+            <ImageButton
+                android:id="@+id/nonpasswordview"
+                android:src="@drawable/nonpasswordview"
+                android:layout_width="30dp"
+                android:layout_height="35dp"
+                android:background="@color/transparent"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"/>
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/login_btn"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:background="@drawable/activity_login_btn"
+            android:text="로그인"
+            android:textColor="@color/white_smoke"
+            android:layout_marginTop="10dp"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/register_btn"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:background="@drawable/activity_login_btn"
+            android:text="회원가입"
+            android:textColor="@color/white_smoke"
+            android:layout_marginTop="10dp"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="자동 로그인"/>
+
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>
