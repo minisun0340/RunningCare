@@ -1,0 +1,81 @@
+
+/*font url*/
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+* {
+    font-family: "Pretendard",serif;
+}
+
+body {
+    display: flex;
+    background-color: #998383;
+    justify-content: center;
+}
+
+.wrap {
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    height: 700px;
+    border : 2px solid white;
+
+    background-position: center;
+    background-size: cover;
+}
+.main {
+    color: white;
+    font-size: 30px;
+    font-style: italic;
+
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.sub {
+    color: white;
+    font-size: 20px;
+    
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+.login {
+    width: 300px;
+    margin: 30px auto 0px auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    width: 280px;
+    height: 30px;
+    
+}
+
+.wrap > a, button {
+    width: 300px;
+    height: 50px;
+
+    background-color: white;
+    border-radius: 8px;
+
+    margin-bottom: 10px;
+
+    font-size: 14px;
+    font-weight: bold;
+    color: #44398A;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    text-decoration: none;
+
+    box-shadow: 3px 3px 5px 0px black;
+}
+
+.wrap > button:hover {
+    background-color: #f2f2f2;
+    font-size: 15px;
+}
