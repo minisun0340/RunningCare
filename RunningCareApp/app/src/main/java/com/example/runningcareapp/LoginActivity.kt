@@ -9,7 +9,6 @@ import android.os.Message
 import android.util.Log
 import android.view.MotionEvent
 import android.view.inputmethod.InputMethodManager
-import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.widget.AppCompatButton
 import okhttp3.*
@@ -30,7 +29,7 @@ class LoginActivity : AppCompatActivity() {
             override fun handleMessage(msg: Message) {
                 super.handleMessage(msg)
                 when(msg.what){
-                    1 -> {var intent = Intent(applicationContext, MainActivity::class.java)
+                    1 -> {var intent = Intent(applicationContext, WebViewActivity::class.java)
                         startActivity(intent)
                         finish()
                     }
@@ -73,9 +72,9 @@ class LoginActivity : AppCompatActivity() {
                 val result:String? = response.body()?.string()
                 Log.d("http", result!!)
 
-                val loginchk = result!!.replace('"', ' ').trim()
+                val loginchk = result.replace('"', ' ').trim()
                 var msg = Message()
-                if(loginchk!! == "ok"){
+                if(loginchk == "ok"){
                     msg.what = 1
                 }else {
                     msg.what = 0
