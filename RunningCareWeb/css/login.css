@@ -7,7 +7,7 @@
 
 body {
     display: flex;
-    background-color: #998383;
+    background-color: #F5F5F5;
     justify-content: center;
 }
 
@@ -16,13 +16,13 @@ body {
     justify-content: center;
     width: 500px;
     height: 700px;
-    border : 2px solid white;
+    border : 2px solid #191970;
 
     background-position: center;
     background-size: cover;
 }
 .main {
-    color: white;
+    color: #A9A9A9;
     font-size: 30px;
     font-style: italic;
 
@@ -30,7 +30,7 @@ body {
     margin-bottom: 10px;
 }
 .sub {
-    color: white;
+    color: #A9A9A9;
     font-size: 20px;
     
     margin-top: 0px;

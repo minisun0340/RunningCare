@@ -8,6 +8,28 @@
     android:gravity="center_horizontal"
     tools:context=".MainActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:background="@color/white_smoke"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        tools:ignore="MissingConstraints">
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="Main"
+            android:textColor="@color/midnight_blue"/>
+        <ImageButton
+            android:foreground="?attr/selectableItemBackground"
+            android:id="@+id/toolbar_menu"
+            android:background="@drawable/menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
     <!--TextView : Display whether bluetooth is available or not-->
     <TextView
         android:id="@+id/bluetoothStatusTv"
@@ -26,22 +48,28 @@
         android:src="@drawable/ic_bluetooth_off"/>
 
     <!--Button : Turn Bluetooth On/off -->
-    <Button
-        android:id="@+id/turnOnOffBtn"
+    <ToggleButton
+        android:id="@+id/ble_on_off_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/Widget.AppCompat.Button.Colored"
-        android:text="Turn On/off"
+        android:text=""
         android:minWidth="200dp"/>
 
     <!--Button : Make Bluetooth Discoverable -->
     <Button
-        android:id="@+id/discoverableBtn"
+        android:id="@+id/scanBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/Widget.AppCompat.Button.Colored"
-        android:text="Discoverable"
+        android:text="SCAN"
+        android:visibility="invisible"
         android:minWidth="200dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"/>
     <!--Button : Get list of paired devices -->
     <Button
         android:id="@+id/pairedBtn"
@@ -50,7 +78,7 @@
         style="@style/Widget.AppCompat.Button.Colored"
         android:text="Get Paired Devices"
         android:minWidth="200dp"/>
-    
+
     <!--Button : Show list of paired devices -->
     <TextView
         android:id="@+id/pairedTv"

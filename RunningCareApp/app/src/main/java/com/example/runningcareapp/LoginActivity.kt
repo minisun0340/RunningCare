@@ -44,45 +44,51 @@ class LoginActivity : AppCompatActivity() {
         val register_btn:AppCompatButton = findViewById(R.id.register_btn)
 
         login_btn.setOnClickListener {
-            thread {
-                val jsonobj = JSONObject()
-                jsonobj.put("user_id", login_Id.text)
-                jsonobj.put("user_password", login_Pass.text)
-                val url="http://(server_uri)/login"
-
-                //okhttp3라이브러리의 okHttpClient객체를 이용해서 작업
-                val client = OkHttpClient()
-
-                //json데이터를 이용하여 request를 저장
-                val jsondata = jsonobj.toString()
-
-                //서버에 요청을 담당하는 객체
-                //request객체를 만들어주는 객체를 생성
-                val builder = Request.Builder()
-                //Builder객체에 request할 주소(네트워크상의 주소) 세팅
-                builder.url(url)
-                //요청메시지 만들고 요청메시지의 타입이 json이라고 설정
-                builder.post(RequestBody.create(MediaType.parse("application/json"), jsondata))
-                //Builder객체를 이용해서 request객체 만들기
-                val myrequest:Request = builder.build()
-                //생성한 request객체를 이용해서 웹에 request하기 - request결과로 response객체가 리턴
-                val response:Response = client.newCall(myrequest).execute()
-
-                //response에서 메시지 꺼내서 로그 출력하기
-                val result:String? = response.body()?.string()
-                Log.d("http", result!!)
-
-                val loginchk = result.replace('"', ' ').trim()
-                var msg = Message()
-                if(loginchk == "ok"){
-                    msg.what = 1
-                }else {
-                    msg.what = 0
-                }
-                Log.d("http", "${msg.what}=====")
-                handler.sendMessage(msg)
-            }
+            val intent = Intent(applicationContext, MainActivity::class.java)
+            startActivity(intent)
+            finish()
         }
+
+//        login_btn.setOnClickListener {
+//            thread {
+//                val jsonobj = JSONObject()
+//                jsonobj.put("user_id", login_Id.text)
+//                jsonobj.put("user_password", login_Pass.text)
+//                val url="http://(server_uri)/login"
+//
+//                //okhttp3라이브러리의 okHttpClient객체를 이용해서 작업
+//                val client = OkHttpClient()
+//
+//                //json데이터를 이용하여 request를 저장
+//                val jsondata = jsonobj.toString()
+//
+//                //서버에 요청을 담당하는 객체
+//                //request객체를 만들어주는 객체를 생성
+//                val builder = Request.Builder()
+//                //Builder객체에 request할 주소(네트워크상의 주소) 세팅
+//                builder.url(url)
+//                //요청메시지 만들고 요청메시지의 타입이 json이라고 설정
+//                builder.post(RequestBody.create(MediaType.parse("application/json"), jsondata))
+//                //Builder객체를 이용해서 request객체 만들기
+//                val myrequest:Request = builder.build()
+//                //생성한 request객체를 이용해서 웹에 request하기 - request결과로 response객체가 리턴
+//                val response:Response = client.newCall(myrequest).execute()
+//
+//                //response에서 메시지 꺼내서 로그 출력하기
+//                val result:String? = response.body()?.string()
+//                Log.d("http", result!!)
+//
+//                val loginchk = result.replace('"', ' ').trim()
+//                var msg = Message()
+//                if(loginchk == "ok"){
+//                    msg.what = 1
+//                }else {
+//                    msg.what = 0
+//                }
+//                Log.d("http", "${msg.what}=====")
+//                handler.sendMessage(msg)
+//            }
+//        }
 
         register_btn.setOnClickListener {
             val intent = Intent(applicationContext, RegisterActivity::class.java)

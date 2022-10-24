@@ -26,5 +26,5 @@ app.get('/myaccount', function(req, res){
 });
 
 app.get('/aboutus', function(req, res){
-    res.sendFile(__dirname + '/html/aboutus.html');
+    res.sendFile(__dirname + '/html/bluetooth.html');
 });

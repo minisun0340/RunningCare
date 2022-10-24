@@ -8,36 +8,40 @@
     tools:context=".Setting_Activity">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/background_color"
         android:orientation="vertical"
-        android:background="@color/background_color" >
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <fragment
             android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
             android:layout_width="400dp"
             android:layout_height="0dp"
-            android:layout_weight="4"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
+            android:layout_weight="4"
             android:background="@color/theme_color"
-            android:name="com.google.android.gms.maps.SupportMapFragment"
-
-            tools:context=".Setting_Activity"/>
+            tools:context=".Setting_Activity" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="0.5"
-            android:orientation="horizontal" >
+            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/Load_location"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_weight="1"
-                android:text="거리"
-                android:layout_gravity="center"/>
+                android:text="거리" />
 
             <TextView
                 android:layout_width="0dp"
@@ -48,9 +52,9 @@
                 android:id="@+id/Check_Battery"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_weight="1"
-                android:text="베터리 확인"
-                android:layout_gravity="center" />
+                android:text="배터리 확인" />
 
         </LinearLayout>
 
@@ -58,7 +62,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="0.5"
-            android:orientation="horizontal" >
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="0dp"
@@ -68,25 +72,25 @@
             <ImageView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_gravity="center"
+                android:layout_weight="1"
                 android:src="@drawable/battery" />
 
             <TextView
                 android:id="@+id/Battery_value"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="100%"
                 android:layout_gravity="center"
-                android:gravity="center" />
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="100%" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="0.5"
-            android:orientation="horizontal" >
+            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/Volum_Button"
@@ -108,13 +112,13 @@
             android:layout_height="0dp"
             android:layout_weight="0.3"
             android:max="5"
-            android:progress="1"/>
+            android:progress="1" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="0.5"
-            android:orientation="horizontal" >
+            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/Run_setting_button"
@@ -130,7 +134,6 @@
 
 
         </LinearLayout>
-
 
 
         <SeekBar

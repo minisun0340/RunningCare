@@ -5,9 +5,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="signup.js"></script>
+    
+    
+    <link rel="stylesheet" href="signup.css" type="text/css">
+    
 </head>
 <body>
-    <h1>signup 페이지입니다.</h1>
-    
+    <div class="wrap">
+        <div class="toolbar">
+            <span class="back" onclick="goback()">
+                <img src="https://img.icons8.com/external-basicons-line-edtgraphics/50/000000/external-Left-arrows-basicons-line-edtgraphics.png" height="20px"/>
+            </span>
+            <span>회원가입</span>
+        </div>
+        <div class="signup_wrap">       
+            <div class="signup">
+                <h1 class="main">Join</h1>
+
+
+                <div class="id">ID</div>
+                <input type="text" id="signup_ID" name="signup_ID"><br>
+                
+                <div class="password">password</div>
+                <input type="password" id="signup_password" name="signup_password"><br>
+
+                <div class="passwordCheck">password check</div>
+                <input type="password" id="signup_passwordCheck" name="signup_passwordCheck"><br>
+
+                <div class="name">Name</div>
+                <input type="text" id="signup_name" name="signup_name"><br>
+
+
+                
+                <form class="birth">
+                    <span class="input_birth">
+                        <label>birthday</label><br>
+                        <SELECT id="years" name="yyyy" onchange="change_year(this)"></SELECT>
+                        <SELECT id="months" name="mm" onchange="change_month(this)"></SELECT>
+                        <SELECT id="days" name="dd" id=""></SELECT>
+                    </span>
+                </form>
+
+                
+
+                <div class="email">E-mail</div>
+                <input type="text" id="email" name="email"><br>
+                
+                <div class="gender">gender</div>
+                <select id="gender" name="gender" onchange="change_gender(this)"></select>
+
+                <div class="phone">phone number</div>
+                <input type="number" id="signup_phone" name="signup_phone">
+                <br><br>
+                <button class="phoneCheck" onclick="phoneCheck()">인증번호 받기</button>
+                
+                <button class="signupBtn" onclick="signup_ok()">가입하기</button>
+                
+                </div>
+        </div>
+    </div>
 </body>
 </html>
